@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Student and Donor Data</title>
+
+</head>
+
+<body class="bg">
+
+     <!-- Navigation Bar -->
+     <div class="navbar">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+            <!--Logo-->
+                <a>
+                    <img src="logo.png" alt="Site Logo">
+                </a>
+            </div>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="data.html">Data</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="support.html">Tech Support</a>
+                </div>
+		<div class="navbar-item">
+                    <a href="support.html">Logout</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+<div class="container" id="data">          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan=3 id="table-title">Student Table</th>
+      </tr>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+<button type="button" class="btn btn-primary" id="data-btn">Edit</button>
+<button type="button" class="btn btn-primary" id="data-btn">Delete</button>
+<button type="button" class="btn btn-primary" id="data-btn">Add Data</button>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tech Support</title>
+</head>
+
+<body class="bg">
+    
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+            <!--Logo-->
+                <a>
+                    <img src="logo.png" alt="Site Logo">
+                </a>
+            </div>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="login.html">Employee Login</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Help Form-->
+
+    <div class="has-text-centered has-background-aqua">
+        <form action="confirm.html" id"tech-support">
+        <!--Form-->
+        <a><img src="logo.png" width="200px" alt="Site Logo" id="logo"></a>
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input type="email" name="" id="">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Are you a Maydm Employee?</label>
+                <div class="control">
+                    Yes <input type="radio" name="employee" id="">
+                    No <input type="radio" name="employee" id="">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control2" style="width: 300px">
+                    <textarea class="textarea"placeholder="Textarea"></textarea>
+                </div>
+            </div>
+            <p>
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

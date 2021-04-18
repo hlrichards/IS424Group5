@@ -1,0 +1,69 @@
+.navbar{
+    background-color: rgb(9, 204, 238);
+}
+
+
+a {
+    color:white;
+}
+
+a:hover {
+    color:black;
+}
+
+.title.is-1{
+    color: rgb(99, 10, 182);
+    text-align: center;
+    font-family:cursive;
+}
+
+.title.is-5{
+    color: rgb(99, 10, 182);
+    text-align: center;
+    font-family:cursive;
+}
+
+.bg{
+    background-color: rgba(231, 201, 230, 0.856);
+}
+
+.subtitle.is-5{
+    color: rgb(99, 10, 182);
+    font-weight: bold;
+    margin: 0%;
+    padding: 2px;
+}
+
+.control2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    margin-top: 50px;
+    border-radius:10px;
+}
+
+#table-title {
+    text-align:center;
+}
+
+#logo {
+    margin-top: 50px;
+    margin-bottom:5px;
+    width: 100px;
+}
+
+#data {
+    text-align:center;
+}
+
+#data-btn {
+    background-color: rgb(9, 204, 238);
+    border-width:0px;
+}
