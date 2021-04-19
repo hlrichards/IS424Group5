@@ -13,7 +13,9 @@
 </head>
 
 <body class="bg">
-    
+    <?php
+session_start()
+?>
     <!-- Navigation Bar -->
     <div class="navbar">
         <div class="navbar-brand">
@@ -44,7 +46,7 @@
     <!--Login Form-->
     <!-- make 3 columns, form is middle one with dif bg color -->
     <div class="has-text-centered has-background-aqua">
-        <form action="data.html">
+        <form action="login.php" method="post">
         <!--Logo-->
             <a><img src="logo.png" width="200px" alt="Site Logo" id="logo"></a>
 
@@ -52,19 +54,19 @@
             <div class="field">
                 <label class="label">Username</label>
                 <div class="control">
-                    <input type="text" name="" id="">
+                    <input type="text" name="username" id="">
                 </div>
             </div>
 
             <div class="field">
                 <label class="label">Password</label>
                 <div class="control">
-                    <input type="password" name="" id="">
+                    <input type="password" name="password" id="">
                 </div>
             </div>
 
             <p>
-                <input type="submit" value="Login">
+                <input type="submit" name="log" value="Login">
                 <input type="reset" value="Reset">
             </p>
         </form>
@@ -73,7 +75,26 @@
     </div>
 
 
-
+<?php
+include("connect.inc.php");
+if ($_POST['log']){
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$query = "SELECT username, password FROM users WHERE (username='$username') AND (password='$password')";
+	$result = mysqli_query($conn, $query);
+	$num = mysqli_num_rows($result);
+	if (!$result){
+		die("cannot processed select query");
+	}
+	if ($num == 1) {
+		echo "<META HTTP-EQUIV=\"refresh\" content=\"0; URL=data.html\"> ";
+	}
+	else{
+		echo "Invalid username/password";
+	}
+}
+mysqli_close($conn);
+?>
 
 
 </body>
