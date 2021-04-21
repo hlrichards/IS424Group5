@@ -1,3 +1,7 @@
+<?php
+include ("connect.inc.php");
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -8,22 +12,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png">
     <title>Employee Login</title>
-
 </head>
 
 <body class="bg">
-    <?php
-session_start()
-?>
+
     <!-- Navigation Bar -->
     <div class="navbar">
+        <a>
+            <img src="logo.png" alt="Site Logo" id="maydm-logo" width=50px height=60px;>
+         </a>
         <div class="navbar-brand">
+            
             <div class="navbar-item">
             <!--Logo-->
-                <a>
-                    <img src="logo.png" alt="Site Logo">
-                </a>
+                
             </div>
             <div class="navbar-burger">
                 <span></span>
@@ -34,7 +38,10 @@ session_start()
         <div class="navbar-menu is-active">
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Our Why</a>
+                </div>
+                <div class="navbar-item" style="background-color:white;">
+                    <a href="login.php"  style="color:rgb(9, 204, 238)">Employee Login</a>
                 </div>
                 <div class="navbar-item">
                     <a href="support.html">Tech Support</a>
@@ -42,6 +49,7 @@ session_start()
             </div>
         </div>
     </div>
+
 
     <!--Login Form-->
     <!-- make 3 columns, form is middle one with dif bg color -->
@@ -52,7 +60,7 @@ session_start()
 
 
             <div class="field">
-                <label class="label">Username</label>
+                <label class="label" style="margin-top:20px;">Username</label>
                 <div class="control">
                     <input type="text" name="username" id="">
                 </div>
@@ -66,18 +74,15 @@ session_start()
             </div>
 
             <p>
-                <input type="submit" name="log" value="Login">
-                <input type="reset" value="Reset">
+	            <input type="submit" class='btn btn-primary' name="submit1" id="data-btn" value="Login">
+                <input type="reset" class='btn btn-primary' value="Reset" id="data-btn">
             </p>
         </form>
 
-
     </div>
-
-
+    
 <?php
-include("connect.inc.php");
-if ($_POST['log']){
+if (isset($_POST['submit1'])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$query = "SELECT username, password FROM users WHERE (username='$username') AND (password='$password')";
@@ -87,7 +92,8 @@ if ($_POST['log']){
 		die("cannot processed select query");
 	}
 	if ($num == 1) {
-		echo "<META HTTP-EQUIV=\"refresh\" content=\"0; URL=data.html\"> ";
+	    $_SESSION['loggedin'] = true;
+		echo "<META HTTP-EQUIV=\"refresh\" content=\"0; URL=student.php\"> ";
 	}
 	else{
 		echo "Invalid username/password";
@@ -96,7 +102,11 @@ if ($_POST['log']){
 mysqli_close($conn);
 ?>
 
-
+<footer class="page-footer font-small"> <! can remove fixed-bottom>
+    <div class="footer-copyright text-center py-3" style="background-color: rgb(9, 204, 238);">© 2021 Copyright: IS424 Group 5 UW-Madison
+    </div>
+ </footer>
 </body>
 
 </html>
+
