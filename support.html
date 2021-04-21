@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png">
     <title>Tech Support</title>
 </head>
 
@@ -14,12 +15,14 @@
     
     <!-- Navigation Bar -->
     <div class="navbar">
+        <a>
+            <img src="logo.png" alt="Site Logo" id="maydm-logo" width=50px height=60px;>
+         </a>
         <div class="navbar-brand">
+            
             <div class="navbar-item">
             <!--Logo-->
-                <a>
-                    <img src="logo.png" alt="Site Logo">
-                </a>
+                
             </div>
             <div class="navbar-burger">
                 <span></span>
@@ -33,7 +36,10 @@
                     <a href="index.html">Our Why</a>
                 </div>
                 <div class="navbar-item">
-                    <a href="login.html">Employee Login</a>
+                    <a href="login.php">Employee Login</a>
+                </div>
+                <div class="navbar-item" style="background-color:white;">
+                    <a href="support.html"  style="color:rgb(9, 204, 238)">Tech Support</a>
                 </div>
             </div>
 
@@ -43,7 +49,7 @@
     <!--Help Form-->
 
     <div class="has-text-centered has-background-aqua">
-        <form action="confirm.html" id"tech-support">
+        <form action="confirm.html" id="tech-support">
         <!--Form-->
         <a><img src="logo.png" width="200px" alt="Site Logo" id="logo"></a>
             <div class="field">
@@ -68,18 +74,21 @@
             <div class="field">
                 <label class="label">Message</label>
                 <div class="control2" style="width: 300px">
-                    <textarea class="textarea"placeholder="Textarea"></textarea>
+                    <textarea class="textarea" placeholder="Message"></textarea>
                 </div>
             </div>
             <p>
-                <input type="submit" value="Send">
-                <input type="reset" value="Reset">
+                <input type="submit" value="Send" class='btn btn-primary' id="data-btn" style="margin-top:5px; margin-bottom:60px;">
+                <input type="reset" value="Reset"  class='btn btn-primary' id="data-btn" style="margin-top:5px; margin-bottom:60px;">
             </p>
         </form>
 
     </div>
 
-
+<footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3" style="background-color: rgb(9, 204, 238);">© 2021 Copyright: IS424 Group 5 UW-Madison
+    </div>
+ </footer>
 </body>
 
 </html>
