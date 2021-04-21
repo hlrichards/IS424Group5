@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bulma-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png">
     <title>Maydm Inc.</title>
 
 </head>
@@ -15,12 +17,14 @@
     
     <!-- Navigation Bar -->
     <div class="navbar">
+        <a>
+            <img src="logo.png" alt="Site Logo" id="maydm-logo" width=50px height=60px;>
+         </a>
         <div class="navbar-brand">
+            
             <div class="navbar-item">
             <!--Logo-->
-                <a>
-                    <img src="logo.png" alt="Site Logo">
-                </a>
+                
             </div>
             <div class="navbar-burger">
                 <span></span>
@@ -30,9 +34,13 @@
         </div>
         <div class="navbar-menu is-active">
             <div class="navbar-end">
-                <div class="navbar-item">
-                    <a href="login.html">Employee Login</a>
+                <div class="navbar-item" style="background-color:white;">
+                    <a href="index.html"  style="color:rgb(9, 204, 238)">Our Why</a>
                 </div>
+                <div class="navbar-item">
+                    <a href="login.php">Employee Login</a>
+                </div>
+                
                 <div class="navbar-item">
                     <a href="support.html">Tech Support</a>
                 </div>
@@ -52,10 +60,8 @@
             <h1 class="title is-1">OUR WHY</h1>
             <h2 class="title is-5">A constant reminder to Maydm employees</h2>
         </div>
-    </div>
 
     <!--Home Text-->
-    <div class="bg">
         <div>
             <h1 class="subtitle is-5">Our Vision</h1>
             <p class="m-1">
@@ -70,18 +76,21 @@
                 <div class="list-item"><li>Boldness</li></div>
                 <div class="list-item"><li>Reflection</li></div>
             </div>
-            
+        </div>  
         <div>
             <h1 class="subtitle is-5">Issues We Address</h1>
             <div class="m-1 list">
                 <div class="list-item"><li>28% Women in Science & Engineering Jobs</li></div>
                 <div class="list-item"><li>33% People of color in Science & Engineering careers</li></div>
                 <div class="list-item"><li>10% K-12 Schools nationwide that teach computer science classes</li></div>
-                <div class="list-item"><li>37% Projected Growth Rate of STEM Jobs</li></div>
+                <div class="list-item" ><li style="margin-bottom:40px;">37% Projected Growth Rate of STEM Jobs</li></div>
             </div>
         </div>
     </div>
-
+<footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3" style="background-color: rgb(9, 204, 238);">© 2021 Copyright: IS424 Group 5 UW-Madison
+    </div>
+ </footer>
 </body>
 
 </html>
