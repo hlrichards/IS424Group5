@@ -1,8 +1,8 @@
 <?php
-$myUserName = "halric4"; 
-$myPassword = "E95qvsXemUgcSiG";
+$myUserName = "id16638289_maydm"; 
+$myPassword = "dRyV/hlf/lAMx5ve";
 $myLocalHost = "localhost";
-$myDB = "halric4_maydm";
+$myDB = "id16638289_maydmdb";
 $conn = mysqli_connect($myLocalHost, $myUserName, $myPassword, $myDB);
 if (!$conn) {
 	die("Connection failed: ");
